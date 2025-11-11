@@ -1,4 +1,4 @@
-package Answers.sql_builder_pattern;
+package homework3.src.problem2;
 
 public class sql {
     private String select;
