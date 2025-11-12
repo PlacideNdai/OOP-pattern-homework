@@ -13,6 +13,13 @@ public class Product implements Subject{
         this.price = price;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
 
     @Override
     public void subscribe(Observer observer) {
