@@ -1,6 +1,6 @@
-package homework3.src.problem1.flowertypes;
+package problem1.flowertypes;
 
-import homework3.src.problem1.Flower;
+import problem1.Flower;
 
 public class RoseBouquet implements Flower{
 

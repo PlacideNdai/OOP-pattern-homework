@@ -1,8 +1,8 @@
-package homework3.src.problem5;
+package problem5;
 
 import java.util.List;
 
-import homework3.src.problem5.prom.Promotion;
+import problem5.prom.Promotion;
 
 public class ShoppingCart {
     private List<CartItem> items;

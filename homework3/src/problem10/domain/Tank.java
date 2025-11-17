@@ -1,4 +1,4 @@
-package homework3.src.problem10.domain;
+package problem10.domain;
 
 public class Tank {
     private String model;

@@ -1,4 +1,4 @@
-package homework3.src.problem9;
+package problem9;
 
 import java.sql.*;
 import java.util.Map;

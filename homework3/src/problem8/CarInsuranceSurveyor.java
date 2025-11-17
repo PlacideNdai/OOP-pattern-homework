@@ -1,4 +1,4 @@
-package homework3.src.problem8;
+package problem8;
 
 public class CarInsuranceSurveyor implements InsuranceClaim{
     

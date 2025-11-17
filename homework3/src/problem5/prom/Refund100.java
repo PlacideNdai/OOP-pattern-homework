@@ -1,4 +1,4 @@
-package homework3.src.problem5.prom;
+package problem5.prom;
 
 public class Refund100 implements Promotion {
     

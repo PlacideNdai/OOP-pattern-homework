@@ -1,4 +1,4 @@
-package homework3.src.problem4;
+package problem4;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

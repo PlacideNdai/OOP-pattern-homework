@@ -1,11 +1,11 @@
-package homework3.src.problem5;
+package problem5;
 
 import java.util.Arrays;
 import java.util.List;
 
-import homework3.src.problem5.prom.GiveAway;
-import homework3.src.problem5.prom.Refund100;
-import homework3.src.problem5.prom.TenOff;
+import problem5.prom.GiveAway;
+import problem5.prom.Refund100;
+import problem5.prom.TenOff;
 
 public class testpromotion {
     public static void main(String[] args) {

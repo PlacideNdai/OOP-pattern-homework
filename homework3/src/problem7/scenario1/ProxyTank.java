@@ -1,4 +1,4 @@
-package homework3.src.problem7.scenario1;
+package problem7.scenario1;
 
 import java.util.Date;
 

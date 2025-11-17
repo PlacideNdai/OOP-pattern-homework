@@ -1,4 +1,4 @@
-package homework3.src.problem4;
+package problem4;
 
 public interface Subject {
     void subscribe(Observer observer);

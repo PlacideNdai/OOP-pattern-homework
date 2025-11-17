@@ -1,4 +1,4 @@
-package homework3.src.problem5;
+package problem5;
 
 public class CartItem {
     public String name;

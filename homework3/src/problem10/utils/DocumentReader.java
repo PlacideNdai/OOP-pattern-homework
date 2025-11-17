@@ -1,4 +1,4 @@
-package homework3.src.problem10.utils;
+package problem10.utils;
 
 import java.io.InputStream;
 

@@ -1,4 +1,4 @@
-package homework3.src.problem1;
+package problem1;
 
 public abstract class FlowerDecorator implements Flower {
     protected Flower decolatedFlower;

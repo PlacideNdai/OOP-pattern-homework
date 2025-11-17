@@ -1,4 +1,4 @@
-package homework3.src.problem10.factory;
+package problem10.factory;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

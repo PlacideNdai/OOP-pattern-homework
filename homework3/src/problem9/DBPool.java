@@ -1,4 +1,4 @@
-package homework3.src.problem9;
+package problem9;
 
 import java.sql.Connection;
 import java.util.LinkedList;

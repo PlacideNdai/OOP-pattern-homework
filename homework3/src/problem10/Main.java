@@ -1,10 +1,10 @@
-package homework3.src.problem10;
+package problem10;
 
 import org.dom4j.Document;
-import problem5.factory.XmlBeanFactory;
-import problem5.resource.ClasspathResource;
-import problem5.utils.DocumentReader;
-import problem5.resource.Resource;
+import problem10.factory.XmlBeanFactory;
+import problem10.resource.ClasspathResource;
+import problem10.resource.Resource;
+import problem10.utils.DocumentReader;
 
 import java.io.InputStream;
 

@@ -1,4 +1,4 @@
-package homework3.src.problem2;
+package problem2;
 
 public class sql {
     private String select;
