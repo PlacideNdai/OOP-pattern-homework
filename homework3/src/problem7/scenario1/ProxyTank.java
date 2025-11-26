@@ -1,15 +1,9 @@
 package problem7.scenario1;
 
-import javax.xml.crypto.Data;
-import java.util.Date;
-import java.util.Timer;
-
 public class ProxyTank implements Movable{
-    private Date now;
     private Tank tank;
-
     public ProxyTank() {
-        this.now = new Date();
+        
     }
 
     @Override
@@ -23,7 +17,7 @@ public class ProxyTank implements Movable{
 
         long endTimer = System.nanoTime();
 
-        long totalTimer = startTimer - endTimer;
+        long totalTimer = endTimer - startTimer;
         System.out.println("Took " + totalTimer + "nano seconds");
     }
 }

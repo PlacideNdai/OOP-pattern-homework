@@ -4,19 +4,24 @@ public class testVendingMachine {
     public static void main(String[] args) {
         VendingMachine machine = new VendingMachine(2);
 
-        machine.insertCoin();
-        machine.insertCoin();
-        machine.pressBuy();
+        VendingMachine vendingMachine = new VendingMachine(2);
+        vendingMachine.insertCoin();
+        vendingMachine.pressBuy();
+        vendingMachine.insertCoin();
+        vendingMachine.pressBuy();
 
-        machine.insertCoin();
-        machine.insertCoin();
-        machine.pressBuy();
+        vendingMachine.insertCoin();
+        vendingMachine.insertCoin();
+        vendingMachine.pressBuy();
 
-        machine.pressBuy();
+        vendingMachine.insertCoin();
+        vendingMachine.insertCoin();
+        vendingMachine.pressBuy();
 
-        machine.insertCoin();
-
-        machine.refill(5);
+        vendingMachine.refill(5);
+        vendingMachine.insertCoin();
+        vendingMachine.insertCoin();
+        vendingMachine.pressBuy();
 
     }
 }
