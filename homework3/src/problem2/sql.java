@@ -7,7 +7,9 @@ public class sql {
     private String groupBy;
     private String orderBy;
     private int limit;
+    private String count;
     private String having;
+    private String join;
 
     private sql(Builder builder) {
         this.select = builder.SELECT;
@@ -17,6 +19,8 @@ public class sql {
         this.orderBy = builder.ORDER_BY;
         this.limit = builder.LIMIT;
         this.having = builder.HAVING;
+        this.count = builder.COUNT;
+        this.join = builder.JOIN;
     }
 
     public static class Builder {
@@ -25,8 +29,10 @@ public class sql {
         private String WHERE;
         private String GROUP_BY;
         private String ORDER_BY;
+        private String COUNT;
         private int LIMIT;
         private String HAVING;
+        private String JOIN;
 
         public Builder select(String select) {
             this.SELECT = select;
@@ -48,6 +54,11 @@ public class sql {
             return this;
         }
 
+        public Builder join(String join) {
+            this.JOIN = join;
+            return this;
+        }
+
         public Builder orderBy(String orderBy) {
             this.ORDER_BY = orderBy;
             return this;
@@ -60,6 +71,11 @@ public class sql {
 
         public Builder having(String having) {
             this.HAVING = having;
+            return this;
+        }
+
+        public Builder count(String count) {
+            this.COUNT = count;
             return this;
         }
 
