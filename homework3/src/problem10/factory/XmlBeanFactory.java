@@ -1,6 +1,5 @@
 package problem10.factory;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.util.List;
 
@@ -27,7 +26,11 @@ public class XmlBeanFactory {
      * @param rootElement root element of BeanDefinitions.xml, which is <beans><beans/>
      */
     public void createBeanInstances(Element rootElement) {
-        
+        List<Element> beans = rootElement.elements("bean");
+
+        for(Element bean : beans){
+            createBeanInstance(bean);
+        }
     }
 
     /**
@@ -40,6 +43,16 @@ public class XmlBeanFactory {
 
         // print this newly created instance here, please uncomment below
         // System.out.println(beanInstance);
+        String beanClassNam = beanElement.attributeValue("class");
+
+        Object beanInstance = createObject(beanClassNam);
+
+        List<Element> propElements = beanElement.elements("property");
+        for(Element propElement : propElements){
+            setPropertyForBeanInstance(beanInstance, propElement);
+        }
+
+        System.out.println(beanInstance);
     }
 
     /**
@@ -49,7 +62,12 @@ public class XmlBeanFactory {
      * @return
      */
     private Object createObject(String beanClassName) {
-        return null;
+        try {
+            Class<?> clazz = Class.forName(beanClassName);
+            return clazz.getDeclaredConstructor().newInstance();
+        } catch (Exception e) {
+            throw new RuntimeException("Faled to create an instance of a class for: " + beanClassName, e);
+        }
     }
 
     /**
@@ -59,6 +77,25 @@ public class XmlBeanFactory {
      * @param propertyElement XML element represents a field and its value, i.e. <property><property/>
      */
     private void setPropertyForBeanInstance(Object beanInstance, Element propertyElement) {
+        try {
+            String fileName = propertyElement.attributeValue("name");
+            String value = propertyElement.attributeValue("value");
 
+            Field field = beanInstance.getClass().getDeclaredField(fileName);
+            field.setAccessible(true);
+
+            Class<?> fieldType = field.getType();
+            Object convertedValue;
+
+            if(fieldType.equals(int.class) || fieldType.equals(Integer.class)){
+                convertedValue = Integer.parseInt(value);
+            } else {
+                convertedValue = value;
+            }
+
+            field.set(beanInstance, convertedValue);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to set property for bean: " + beanInstance, e);
+        }
     }
 }
